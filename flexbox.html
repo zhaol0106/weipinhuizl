@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style>
+		    /*div1设置为弹性盒子
+		     * 1. 弹性盒子中的元素之间没有空格间隙
+		     * 2. 弹性盒子中的元素默认都是横排
+		     * 3. 弹性盒子中的元素容易对齐
+		     *   justify-content: 
+		     *           flex-start:居左对齐 
+		     *           center:居中对齐 
+		     *           flex-end:居右对齐
+		     *           space-between:两端对齐
+		     *           space-around:平分剩余空间
+		     * 
+		     * 4. 元素垂直方向居中容易
+		     *   align-items:
+		     *          flex-start:居上
+		     *          center:居中
+		     *          flex-end:居下
+		     *          stretch:拉伸（默认）      
+		     * 
+		     * 5. 改变item的宽度的时候，高度默认不会等比缩放，所以会有拉伸的效果
+			 *    解决方法：设置弹性盒子的垂直居中为flex-start || center || flex-end
+			 *
+			 * 6. 弹性盒子里的元素默认不换行，如果想让元素换行，需要设置flex-wrap:wrap。
+		     */		   
+			#div1
+			{
+				display: flex;
+				justify-content: space-between;
+			}
+			#div2
+			{
+				height: 500px;
+				border: 1px solid red;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			#div3
+			{
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+			}
+			.item
+			{
+				width:20%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="s1">衣恋集团品牌女装品牌特卖会</div>
+			<div id="s2">剩3天</div>
+		</div>
+		<div id="div2">
+			<img src="img/15420731471304.jpg" />
+			<img src="img/15420731720693.jpg" />
+		</div>		
+		<div id="div3">
+			<img class="item" src="img/15420731471304.jpg" />
+			<img class="item" src="img/15420731720693.jpg" />
+			<img class="item" src="img/15420732017875.jpg" />
+			<img class="item" src="img/15420732274447.jpg" />
+			<img class="item" src="img/15420733032269.jpg" />
+			<img class="item" src="img/15420733296928.jpg" />
+			<img class="item" src="img/15420733666197.jpg" />
+			<img class="item" src="img/15420733912841.jpg" />
+			<img class="item" src="img/15420734196780.jpg" />
+			<img class="item" src="img/15420734442435.jpg" />
+		</div>
+	</body>
+</html>
